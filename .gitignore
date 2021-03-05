@@ -1,0 +1,30 @@
+### Node.js ###
+# Dependencies
+node_modules/
+package-lock.json
+
+# Development Builds
+dist/*.dev.js
+dist/*.example.js
+dist/*.LICENSE.txt
+
+# dotenv Environment Variables
+.env
+.env.dev
+.env.test
+
+
+### Windows ###
+*.lnk
+Thumbs.db
+[Dd]esktop.ini
+
+
+### Mac ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+
+### VSCode ###
+.vscode/

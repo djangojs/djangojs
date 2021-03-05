@@ -1,0 +1,40 @@
+{
+  "name": "django",
+  "version": "0.1.1",
+  "description": "Node.js Implementation of Django",
+  "license": "MIT",
+  "author": "djangojs <django.js.dev@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/djangojs/djangojs"
+  },
+  "bugs": "https://github.com/djangojs/djangojs/issues",
+  "homepage": "",
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {
+    "@types/mocha": "^8.2.1",
+    "mocha": "^8.3.0",
+    "nodemon": "^2.0.7",
+    "nodemon-webpack-plugin": "^4.4.4",
+    "ts-loader": "^8.0.17",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3",
+    "webpack": "^5.24.3",
+    "webpack-cli": "^4.5.0"
+  },
+  "files": [
+    "index.d.ts",
+    "index.ts",
+    "types/",
+    "lib/",
+    "dist/"
+  ],
+  "main": "./dist/django.min.js",
+  "scripts": {
+    "dev": "NODE_ENV=development webpack --config ./config/webpack.config.dev.js",
+    "test": "TS_NODE_PROJECT='./config/tsconfig.test.json' TS_NODE_FILES=true mocha -r ts-node/register ./test/",
+    "prod": "NODE_ENV=production webpack --config ./config/webpack.config.prod.js",
+    "example": "NODE_ENV=development webpack --config ./config/webpack.config.example.js && nodemon -h ./dist/django.example.js"
+  }
+}
